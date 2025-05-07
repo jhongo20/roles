@@ -1,0 +1,272 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|d:\\users\\jhon\\documentos\\mintrabajo\\modulo general usuarios\\auth\\backend\\authsystem\\src\\authsystem.application\\commands\\registercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|solutionrelative:src\\authsystem.application\\commands\\registercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|d:\\users\\jhon\\documentos\\mintrabajo\\modulo general usuarios\\auth\\backend\\authsystem\\src\\authsystem.application\\commands\\changepasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|solutionrelative:src\\authsystem.application\\commands\\changepasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|d:\\users\\jhon\\documentos\\mintrabajo\\modulo general usuarios\\auth\\backend\\authsystem\\src\\authsystem.application\\commands\\authenticatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|solutionrelative:src\\authsystem.application\\commands\\authenticatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|d:\\users\\jhon\\documentos\\mintrabajo\\modulo general usuarios\\auth\\backend\\authsystem\\src\\authsystem.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|solutionrelative:src\\authsystem.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|d:\\users\\jhon\\documentos\\mintrabajo\\modulo general usuarios\\auth\\backend\\authsystem\\src\\authsystem.application\\validators\\changepasswordcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|solutionrelative:src\\authsystem.application\\validators\\changepasswordcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|d:\\users\\jhon\\documentos\\mintrabajo\\modulo general usuarios\\auth\\backend\\authsystem\\src\\authsystem.application\\validators\\twofactorlogincommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|solutionrelative:src\\authsystem.application\\validators\\twofactorlogincommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|d:\\users\\jhon\\documentos\\mintrabajo\\modulo general usuarios\\auth\\backend\\authsystem\\src\\authsystem.application\\validators\\registercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|solutionrelative:src\\authsystem.application\\validators\\registercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|d:\\users\\jhon\\documentos\\mintrabajo\\modulo general usuarios\\auth\\backend\\authsystem\\src\\authsystem.application\\validators\\authenticatecommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1357791E-A8BB-435A-82BA-148A421E8070}|src\\AuthSystem.Application\\AuthSystem.Application.csproj|solutionrelative:src\\authsystem.application\\validators\\authenticatecommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40030FC5-4860-4598-A555-ABA4CDE055F4}|src\\AuthSystem.API\\AuthSystem.API.csproj|d:\\users\\jhon\\documentos\\mintrabajo\\modulo general usuarios\\auth\\backend\\authsystem\\src\\authsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{40030FC5-4860-4598-A555-ABA4CDE055F4}|src\\AuthSystem.API\\AuthSystem.API.csproj|solutionrelative:src\\authsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACACD125-C4BF-4027-B1DB-15D63E6D9296}|src\\AuthSystem.Infrastructure\\AuthSystem.Infrastructure.csproj|d:\\users\\jhon\\documentos\\mintrabajo\\modulo general usuarios\\auth\\backend\\authsystem\\src\\authsystem.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACACD125-C4BF-4027-B1DB-15D63E6D9296}|src\\AuthSystem.Infrastructure\\AuthSystem.Infrastructure.csproj|solutionrelative:src\\authsystem.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACACD125-C4BF-4027-B1DB-15D63E6D9296}|src\\AuthSystem.Infrastructure\\AuthSystem.Infrastructure.csproj|d:\\users\\jhon\\documentos\\mintrabajo\\modulo general usuarios\\auth\\backend\\authsystem\\src\\authsystem.infrastructure\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACACD125-C4BF-4027-B1DB-15D63E6D9296}|src\\AuthSystem.Infrastructure\\AuthSystem.Infrastructure.csproj|solutionrelative:src\\authsystem.infrastructure\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4404F4FF-AD82-4B2D-9DF7-7EC519EA7537}|src\\AuthSystem.Core\\AuthSystem.Core.csproj|d:\\users\\jhon\\documentos\\mintrabajo\\modulo general usuarios\\auth\\backend\\authsystem\\src\\authsystem.core\\entities\\emailconfirmationtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4404F4FF-AD82-4B2D-9DF7-7EC519EA7537}|src\\AuthSystem.Core\\AuthSystem.Core.csproj|solutionrelative:src\\authsystem.core\\entities\\emailconfirmationtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegisterCommand.cs",
+              "DocumentMoniker": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Commands\\RegisterCommand.cs",
+              "RelativeDocumentMoniker": "src\\AuthSystem.Application\\Commands\\RegisterCommand.cs",
+              "ToolTip": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Commands\\RegisterCommand.cs",
+              "RelativeToolTip": "src\\AuthSystem.Application\\Commands\\RegisterCommand.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAArwEYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T00:44:36.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChangePasswordCommand.cs",
+              "DocumentMoniker": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Commands\\ChangePasswordCommand.cs",
+              "RelativeDocumentMoniker": "src\\AuthSystem.Application\\Commands\\ChangePasswordCommand.cs",
+              "ToolTip": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Commands\\ChangePasswordCommand.cs",
+              "RelativeToolTip": "src\\AuthSystem.Application\\Commands\\ChangePasswordCommand.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAADgv2oAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T00:42:40.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthenticateCommand.cs",
+              "DocumentMoniker": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Commands\\AuthenticateCommand.cs",
+              "RelativeDocumentMoniker": "src\\AuthSystem.Application\\Commands\\AuthenticateCommand.cs",
+              "ToolTip": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Commands\\AuthenticateCommand.cs*",
+              "RelativeToolTip": "src\\AuthSystem.Application\\Commands\\AuthenticateCommand.cs*",
+              "ViewState": "AgIAAHgAAAAAAAAAAADgv5oAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T00:36:38.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\AuthSystem.Application\\DependencyInjection.cs",
+              "ToolTip": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "src\\AuthSystem.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T22:18:04.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChangePasswordCommandValidator.cs",
+              "DocumentMoniker": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Validators\\ChangePasswordCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\AuthSystem.Application\\Validators\\ChangePasswordCommandValidator.cs",
+              "ToolTip": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Validators\\ChangePasswordCommandValidator.cs",
+              "RelativeToolTip": "src\\AuthSystem.Application\\Validators\\ChangePasswordCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T22:14:52.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TwoFactorLoginCommandValidator.cs",
+              "DocumentMoniker": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Validators\\TwoFactorLoginCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\AuthSystem.Application\\Validators\\TwoFactorLoginCommandValidator.cs",
+              "ToolTip": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Validators\\TwoFactorLoginCommandValidator.cs",
+              "RelativeToolTip": "src\\AuthSystem.Application\\Validators\\TwoFactorLoginCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T22:14:35.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterCommandValidator.cs",
+              "DocumentMoniker": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Validators\\RegisterCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\AuthSystem.Application\\Validators\\RegisterCommandValidator.cs",
+              "ToolTip": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Validators\\RegisterCommandValidator.cs",
+              "RelativeToolTip": "src\\AuthSystem.Application\\Validators\\RegisterCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T22:14:03.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthenticateCommandValidator.cs",
+              "DocumentMoniker": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Validators\\AuthenticateCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\AuthSystem.Application\\Validators\\AuthenticateCommandValidator.cs",
+              "ToolTip": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Application\\Validators\\AuthenticateCommandValidator.cs",
+              "RelativeToolTip": "src\\AuthSystem.Application\\Validators\\AuthenticateCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T22:12:48.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.API\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\AuthSystem.API\\appsettings.json",
+              "ToolTip": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.API\\appsettings.json",
+              "RelativeToolTip": "src\\AuthSystem.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-06T20:27:39.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Infrastructure\\Data\\ApplicationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "src\\AuthSystem.Infrastructure\\Data\\ApplicationDbContextFactory.cs",
+              "ToolTip": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Infrastructure\\Data\\ApplicationDbContextFactory.cs",
+              "RelativeToolTip": "src\\AuthSystem.Infrastructure\\Data\\ApplicationDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T20:26:52.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmailConfirmationToken.cs",
+              "DocumentMoniker": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Core\\Entities\\EmailConfirmationToken.cs",
+              "RelativeDocumentMoniker": "src\\AuthSystem.Core\\Entities\\EmailConfirmationToken.cs",
+              "ToolTip": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Core\\Entities\\EmailConfirmationToken.cs",
+              "RelativeToolTip": "src\\AuthSystem.Core\\Entities\\EmailConfirmationToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T20:18:14.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "src\\AuthSystem.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\src\\AuthSystem.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "src\\AuthSystem.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAqwEQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T19:33:17.954Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
