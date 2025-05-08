@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Gmn0HLEKahk=",
+  "dgSpecHash": "Pb/UmpSv6A8=",
   "success": true,
   "projectFilePath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\tests\\AuthSystem.IntegrationTests\\AuthSystem.IntegrationTests.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\JHON\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
+    "C:\\Users\\JHON\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\docker.dotnet.enhanced\\3.126.1\\docker.dotnet.enhanced.3.126.1.nupkg.sha512",
@@ -112,6 +113,7 @@
     "C:\\Users\\JHON\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.13.0\\microsoft.testplatform.objectmodel.17.13.0.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\microsoft.testplatform.testhost\\17.13.0\\microsoft.testplatform.testhost.17.13.0.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\JHON\\.nuget\\packages\\moq\\4.20.72\\moq.4.20.72.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\namotion.reflection\\3.4.2\\namotion.reflection.3.4.2.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\njsonschema\\11.3.2\\njsonschema.11.3.2.nupkg.sha512",

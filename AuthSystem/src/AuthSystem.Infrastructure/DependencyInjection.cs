@@ -42,7 +42,26 @@ namespace AuthSystem.Infrastructure
             services.AddScoped<ITotpService, TotpService>();
             services.AddScoped<IAuditService, AuditService>();
             services.AddScoped<IEmailTemplateService, EmailTemplateService>();
-            services.AddScoped<IEmailService, EmailService>();
+            
+            // Configurar servicio de email (real o mock según configuración)
+            var useMockEmailService = configuration.GetValue<bool>("UseMockEmailService");
+            if (useMockEmailService)
+            {
+                services.AddScoped<IEmailService, MockEmailService>();
+            }
+            else
+            {
+                services.AddScoped<IEmailService, EmailService>();
+            }
+            
+            // Registrar servicio de cola para envío de emails
+            services.AddHostedService<BackgroundEmailSender>();
+            services.AddSingleton<BackgroundEmailSender>();
+            services.AddScoped<IEmailQueueService, EmailQueueService>();
+            
+            // Registrar servicio de limitación de intentos
+            services.AddSingleton<IRateLimitService, RateLimitService>();
+            
             services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
 
             // Configuración

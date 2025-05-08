@@ -12,6 +12,7 @@
           "FluentAssertions": "8.2.0",
           "Microsoft.EntityFrameworkCore.InMemory": "9.0.4",
           "Microsoft.NET.Test.Sdk": "17.13.0",
+          "Moq": "4.20.72",
           "Respawn": "6.2.1",
           "Testcontainers": "4.4.0",
           "Testcontainers.MsSql": "4.4.0",
@@ -132,6 +133,17 @@
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.4.0.33771"
+          }
+        }
+      },
+      "Castle.Core/5.1.1": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Castle.Core.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.1.1.0"
           }
         }
       },
@@ -1402,6 +1414,17 @@
           "System.Security.Principal.Windows": "5.0.0"
         }
       },
+      "Moq/4.20.72": {
+        "dependencies": {
+          "Castle.Core": "5.1.1"
+        },
+        "runtime": {
+          "lib/net6.0/Moq.dll": {
+            "assemblyVersion": "4.20.72.0",
+            "fileVersion": "4.20.72.0"
+          }
+        }
+      },
       "Namotion.Reflection/3.4.2": {
         "runtime": {
           "lib/net8.0/Namotion.Reflection.dll": {
@@ -2253,6 +2276,13 @@
       "path": "bouncycastle.cryptography/2.4.0",
       "hashPath": "bouncycastle.cryptography.2.4.0.nupkg.sha512"
     },
+    "Castle.Core/5.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
+      "path": "castle.core/5.1.1",
+      "hashPath": "castle.core.5.1.1.nupkg.sha512"
+    },
     "coverlet.collector/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2945,6 +2975,13 @@
       "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "Moq/4.20.72": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EA55cjyNn8eTNWrgrdZJH5QLFp2L43oxl1tlkoYUKIE9pRwL784OWiTXeCV5ApS+AMYEAlt7Fo03A2XfouvHmQ==",
+      "path": "moq/4.20.72",
+      "hashPath": "moq.4.20.72.nupkg.sha512"
     },
     "Namotion.Reflection/3.4.2": {
       "type": "package",

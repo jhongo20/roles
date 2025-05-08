@@ -34,4 +34,10 @@
     <ProjectReference Include="..\AuthSystem.Infrastructure\AuthSystem.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="Email\Templates\*.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

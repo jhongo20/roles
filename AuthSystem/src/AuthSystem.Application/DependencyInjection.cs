@@ -1,5 +1,6 @@
 // AuthSystem.Application/DependencyInjection.cs
 using System.Reflection;
+using AuthSystem.Application.Common;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +25,9 @@ namespace AuthSystem.Application
 
             // Registrar FluentValidation
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+            // Registrar servicios de la aplicación
+            services.AddScoped<EmailSenderHelper>();
 
             return services;
         }
