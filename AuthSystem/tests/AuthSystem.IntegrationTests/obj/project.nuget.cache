@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gzZd50+fFt8=",
+  "dgSpecHash": "Gmn0HLEKahk=",
   "success": true,
-  "projectFilePath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\tests\\AuthSystem.IntegrationTests\\AuthSystem.IntegrationTests.csproj",
+  "projectFilePath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\tests\\AuthSystem.IntegrationTests\\AuthSystem.IntegrationTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JHON\\.nuget\\packages\\aspnetcore.healthchecks.redis\\9.0.0\\aspnetcore.healthchecks.redis.9.0.0.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\aspnetcore.healthchecks.sqlserver\\9.0.0\\aspnetcore.healthchecks.sqlserver.9.0.0.nupkg.sha512",

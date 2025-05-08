@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "o3AoWgXljkM=",
+  "dgSpecHash": "qp+rA53PgBA=",
   "success": true,
-  "projectFilePath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\Auth\\backend\\AuthSystem\\tests\\AuthSystem.FunctionalTests\\AuthSystem.FunctionalTests.csproj",
+  "projectFilePath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\tests\\AuthSystem.FunctionalTests\\AuthSystem.FunctionalTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JHON\\.nuget\\packages\\anglesharp\\1.1.2\\anglesharp.1.1.2.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\aspnetcore.healthchecks.redis\\9.0.0\\aspnetcore.healthchecks.redis.9.0.0.nupkg.sha512",

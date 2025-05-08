@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,6 +41,7 @@ namespace AuthSystem.Infrastructure
             services.AddScoped<IPasswordHasher, PasswordHasher>();
             services.AddScoped<ITotpService, TotpService>();
             services.AddScoped<IAuditService, AuditService>();
+            services.AddScoped<IEmailTemplateService, EmailTemplateService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
 
