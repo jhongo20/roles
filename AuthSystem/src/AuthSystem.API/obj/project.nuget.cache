@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "9pYR+Dv2VrU=",
+  "dgSpecHash": "U41LAHX95D0=",
   "success": true,
-  "projectFilePath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.API\\AuthSystem.API.csproj",
+  "projectFilePath": "d:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.API\\AuthSystem.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JHON\\.nuget\\packages\\aspnetcore.healthchecks.redis\\9.0.0\\aspnetcore.healthchecks.redis.9.0.0.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\aspnetcore.healthchecks.sqlserver\\9.0.0\\aspnetcore.healthchecks.sqlserver.9.0.0.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\aspnetcoreratelimit\\5.0.0\\aspnetcoreratelimit.5.0.0.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\JHON\\.nuget\\packages\\azure.communication.sms\\1.0.1\\azure.communication.sms.1.0.1.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",

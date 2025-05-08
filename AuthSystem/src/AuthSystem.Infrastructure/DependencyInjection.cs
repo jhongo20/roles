@@ -86,6 +86,28 @@ namespace AuthSystem.Infrastructure
             {
                 services.AddDistributedMemoryCache();
             }
+            
+            // Configurar servicio de SMS (activado/desactivado según configuración)
+            var useSmsService = configuration.GetValue<bool>("UseSmsService");
+            if (useSmsService)
+            {
+                // Usar servicio real o mock según configuración
+                var useMockSmsService = configuration.GetValue<bool>("UseMockSmsService");
+                if (useMockSmsService)
+                {
+                    services.AddScoped<ISmsService, MockSmsService>();
+                }
+                else
+                {
+                    services.Configure<AzureCommunicationSettings>(configuration.GetSection("AzureCommunicationSettings"));
+                    services.AddScoped<ISmsService, AzureSmsService>();
+                }
+            }
+            else
+            {
+                // Si el servicio SMS está desactivado, usar una implementación vacía
+                services.AddScoped<ISmsService, MockSmsService>();
+            }
 
             return services;
         }

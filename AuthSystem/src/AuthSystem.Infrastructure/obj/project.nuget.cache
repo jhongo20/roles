@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "E408nUYhUOI=",
+  "dgSpecHash": "GmW5i0fG2T8=",
   "success": true,
-  "projectFilePath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Infrastructure\\AuthSystem.Infrastructure.csproj",
+  "projectFilePath": "d:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Infrastructure\\AuthSystem.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\JHON\\.nuget\\packages\\azure.communication.sms\\1.0.1\\azure.communication.sms.1.0.1.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",

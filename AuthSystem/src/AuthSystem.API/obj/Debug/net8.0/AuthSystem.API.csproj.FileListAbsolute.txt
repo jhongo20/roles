@@ -514,3 +514,4 @@ D:\Users\Jhon\Documentos\Mintrabajo\Modulo General usuarios\roles y usuarios\Aut
 D:\Users\Jhon\Documentos\Mintrabajo\Modulo General usuarios\roles y usuarios\AuthSystem\src\AuthSystem.API\bin\Debug\net8.0\Email\Templates\EmailConfirmation.html
 D:\Users\Jhon\Documentos\Mintrabajo\Modulo General usuarios\roles y usuarios\AuthSystem\src\AuthSystem.API\bin\Debug\net8.0\Email\Templates\PasswordReset.html
 D:\Users\Jhon\Documentos\Mintrabajo\Modulo General usuarios\roles y usuarios\AuthSystem\src\AuthSystem.API\bin\Debug\net8.0\Email\Templates\TwoFactorCode.html
+d:\Users\Jhon\Documentos\Mintrabajo\Modulo General usuarios\roles y usuarios\AuthSystem\src\AuthSystem.API\bin\Debug\net8.0\Azure.Communication.Sms.dll

@@ -83,6 +83,23 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "Azure.Communication.Sms/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Core": "1.14.0",
+          "System.Text.Json": "4.6.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Communication.Sms.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Communication.Sms.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -3409,6 +3426,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AuthSystem.Core": "1.0.0",
+          "Azure.Communication.Sms": "1.0.1",
           "BCrypt.Net-Next": "4.0.3",
           "Dapper": "2.1.66",
           "FluentValidation.DependencyInjectionExtensions": "12.0.0",
@@ -3512,6 +3530,22 @@
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "icon.png",
         "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+      ]
+    },
+    "Azure.Communication.Sms/1.0.1": {
+      "sha512": "lY6COxdSaG+Y/nK4QXdqqJD3XS6JZ8rsh3TzT0jid6r6J3VK48/cSjgCYxEm0ihgqxIILd7wUb2f4qhYbRWfeA==",
+      "type": "package",
+      "path": "azure.communication.sms/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "README.md",
+        "azure.communication.sms.1.0.1.nupkg.sha512",
+        "azure.communication.sms.nuspec",
+        "lib/netstandard2.0/Azure.Communication.Sms.dll",
+        "lib/netstandard2.0/Azure.Communication.Sms.xml",
+        "pkgicon.png"
       ]
     },
     "Azure.Core/1.38.0": {
@@ -8532,11 +8566,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.API\\AuthSystem.API.csproj",
+      "projectUniqueName": "d:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.API\\AuthSystem.API.csproj",
       "projectName": "AuthSystem.API",
-      "projectPath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.API\\AuthSystem.API.csproj",
+      "projectPath": "d:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.API\\AuthSystem.API.csproj",
       "packagesPath": "C:\\Users\\JHON\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.API\\obj\\",
+      "outputPath": "d:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -8558,14 +8592,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Application\\AuthSystem.Application.csproj": {
-              "projectPath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Application\\AuthSystem.Application.csproj"
+            "d:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Application\\AuthSystem.Application.csproj": {
+              "projectPath": "d:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Application\\AuthSystem.Application.csproj"
             },
-            "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Core\\AuthSystem.Core.csproj": {
-              "projectPath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Core\\AuthSystem.Core.csproj"
+            "d:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Core\\AuthSystem.Core.csproj": {
+              "projectPath": "d:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Core\\AuthSystem.Core.csproj"
             },
-            "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Infrastructure\\AuthSystem.Infrastructure.csproj": {
-              "projectPath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Infrastructure\\AuthSystem.Infrastructure.csproj"
+            "d:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Infrastructure\\AuthSystem.Infrastructure.csproj": {
+              "projectPath": "d:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\src\\AuthSystem.Infrastructure\\AuthSystem.Infrastructure.csproj"
             }
           }
         }

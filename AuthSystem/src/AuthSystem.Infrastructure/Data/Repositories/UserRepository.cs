@@ -332,6 +332,8 @@ namespace AuthSystem.Infrastructure.Data.Repositories
 
             if (tokenEntity == null)
             {
+                // No podemos crear una instancia de User sin argumentos, así que devolvemos null
+                // El método que llama a esta función debe manejar el caso de User nulo
                 return (false, null);
             }
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -90,7 +90,7 @@ namespace AuthSystem.Infrastructure.Security
         {
             if (string.IsNullOrEmpty(token))
             {
-                return (false, null, null);
+                return (false, string.Empty, string.Empty);
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -118,7 +118,7 @@ namespace AuthSystem.Infrastructure.Security
                 // Verificar si el token ha sido revocado
                 if (await _userRepository.IsTokenRevokedAsync(Guid.Parse(userId), jti))
                 {
-                    return (false, null, null);
+                    return (false, string.Empty, string.Empty);
                 }
 
                 return (true, userId, jti);
@@ -126,7 +126,7 @@ namespace AuthSystem.Infrastructure.Security
             catch
             {
                 // Devolver falso si la validación falla
-                return (false, null, null);
+                return (false, string.Empty, string.Empty);
             }
         }
 
