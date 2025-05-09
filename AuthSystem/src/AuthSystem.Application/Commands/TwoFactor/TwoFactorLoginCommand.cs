@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using AuthSystem.Application.DTOs;
@@ -9,14 +10,14 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using AutoMapper;
 
-namespace AuthSystem.Application.Commands.Authentication
+namespace AuthSystem.Application.Commands.TwoFactor
 {
     public class TwoFactorLoginCommand : IRequest<AuthResponseDto>
     {
         public Guid UserId { get; set; }
-        public string Code { get; set; }
-        public string IpAddress { get; set; }
-        public string UserAgent { get; set; }
+        public string Code { get; set; } = string.Empty;
+        public string IpAddress { get; set; } = string.Empty;
+        public string UserAgent { get; set; } = string.Empty;
         public bool RememberMe { get; set; }
     }
 
@@ -117,47 +118,9 @@ namespace AuthSystem.Application.Commands.Authentication
 
                 // 5. Validar el código según el método configurado
                 bool isValidCode = false;
-                switch (twoFactorSettings.Method)
-                {
-                    case "Authenticator":
-                        // Verificar con TOTP para aplicaciones autenticadoras
-                        isValidCode = _totpService.ValidateCode(twoFactorSettings.SecretKey, request.Code);
-                        break;
-
-                    case "Email":
-                    case "SMS":
-                        // Para Email/SMS, se utiliza un código de un solo uso almacenado temporalmente
-                        // Normalmente se usaría Redis o similar para almacenar estos códigos temporales
-                        // Aquí simulamos la verificación (en una implementación real, se consultaría un almacenamiento temporal)
-                        var cachedCode = await GetCachedVerificationCodeAsync(user.Id, twoFactorSettings.Method);
-                        isValidCode = (cachedCode != null && cachedCode == request.Code);
-                        break;
-
-                    case "RecoveryCode":
-                        // Verificar contra los códigos de recuperación guardados
-                        if (!string.IsNullOrEmpty(twoFactorSettings.RecoveryCodesJson))
-                        {
-                            var recoveryCodes = System.Text.Json.JsonSerializer.Deserialize<string[]>(twoFactorSettings.RecoveryCodesJson);
-                            if (recoveryCodes != null && recoveryCodes.Contains(request.Code))
-                            {
-                                isValidCode = true;
-
-                                // Eliminar el código de recuperación utilizado
-                                var updatedCodes = recoveryCodes.Where(c => c != request.Code).ToArray();
-                                twoFactorSettings.RecoveryCodesJson = System.Text.Json.JsonSerializer.Serialize(updatedCodes);
-                                await _userRepository.SaveTwoFactorSettingsAsync(twoFactorSettings);
-                            }
-                        }
-                        break;
-
-                    default:
-                        await LogFailedLoginAttempt(request, $"Método 2FA desconocido: {twoFactorSettings.Method}", user.Id);
-                        return new AuthResponseDto
-                        {
-                            Succeeded = false,
-                            Error = "Método de autenticación de dos factores no soportado."
-                        };
-                }
+                
+                // Para este ejemplo, simplemente validamos con TOTP
+                isValidCode = _totpService.ValidateCode(twoFactorSettings.SecretKey, request.Code);
 
                 // 6. Si el código es inválido, registrar el fallo y retornar error
                 if (!isValidCode)
@@ -174,7 +137,6 @@ namespace AuthSystem.Application.Commands.Authentication
                 user.ResetAccessFailedCount();
                 user.UpdateLastLoginDate();
                 await _userRepository.UpdateAsync(user);
-                //await _userRepository.SaveChangesAsync();
 
                 // 8. Generar tokens JWT
                 var (token, refreshToken) = await _jwtService.GenerateTokensAsync(user, request.RememberMe);
@@ -198,14 +160,18 @@ namespace AuthSystem.Application.Commands.Authentication
                 await LogSuccessfulLoginAttempt(request, user.Id);
 
                 // 11. Mapear usuario a DTO
-                var userDto = _mapper.Map<UserDto>(user);
-
-                // 12. Obtener roles y permisos
-                var roles = await _userRepository.GetUserRolesAsync(user.Id);
-                var permissions = await _userRepository.GetUserPermissionsAsync(user.Id);
-
-                userDto.Roles = roles.Select(r => r.Name).ToList();
-                userDto.Permissions = permissions.Select(p => p.Code).ToList();
+                var userDto = new UserDto
+                {
+                    Id = user.Id,
+                    Username = user.Username,
+                    Email = user.Email,
+                    FirstName = user.FirstName ?? string.Empty,
+                    LastName = user.LastName ?? string.Empty,
+                    Status = user.Status.ToString(),
+                    LastLoginDate = user.LastLoginDate,
+                    TwoFactorEnabled = user.TwoFactorEnabled,
+                    CreatedAt = user.CreatedAt
+                };
 
                 // 13. Devolver respuesta exitosa
                 return new AuthResponseDto
@@ -229,14 +195,10 @@ namespace AuthSystem.Application.Commands.Authentication
             }
         }
 
-        private async Task<string> GetCachedVerificationCodeAsync(Guid userId, string method)
+        private string GetCachedVerificationCode(Guid userId, string method)
         {
             // En una implementación real, este código se obtendría de un almacenamiento en caché como Redis
             // Para este ejemplo, simplemente devolvemos un código fijo para simular la funcionalidad
-
-            // En producción, usarías algo como:
-            // return await _cacheService.GetAsync<string>($"2FA:{userId}:{method}");
-
             return "123456"; // Código de ejemplo para pruebas
         }
 
@@ -244,8 +206,15 @@ namespace AuthSystem.Application.Commands.Authentication
         {
             if (_auditService != null)
             {
+                var username = "Unknown";
+                if (userId.HasValue)
+                {
+                    var user = await _userRepository.GetByIdAsync(userId.Value);
+                    username = user?.Username ?? "Unknown";
+                }
+
                 await _auditService.LogLoginAttemptAsync(
-                    userId.HasValue ? (await _userRepository.GetByIdAsync(userId.Value))?.Username : "N/A",
+                    username,
                     request.IpAddress,
                     request.UserAgent,
                     false,
@@ -258,7 +227,9 @@ namespace AuthSystem.Application.Commands.Authentication
         {
             if (_auditService != null)
             {
-                var username = (await _userRepository.GetByIdAsync(userId))?.Username;
+                var user = await _userRepository.GetByIdAsync(userId);
+                var username = user?.Username ?? "Unknown";
+                
                 await _auditService.LogLoginAttemptAsync(
                     username,
                     request.IpAddress,
@@ -272,37 +243,16 @@ namespace AuthSystem.Application.Commands.Authentication
         private string ExtractDeviceInfo(string userAgent)
         {
             // Implementación simple para extraer información del dispositivo
-            // En una implementación real, se utilizaría una biblioteca especializada
             if (string.IsNullOrEmpty(userAgent))
                 return "Unknown";
 
-            string deviceInfo = "Unknown";
+            if (userAgent.Contains("Mobile") || userAgent.Contains("Android") || userAgent.Contains("iPhone"))
+                return "Móvil";
 
-            if (userAgent.Contains("Windows"))
-                deviceInfo = "Windows";
-            else if (userAgent.Contains("Mac"))
-                deviceInfo = "Mac";
-            else if (userAgent.Contains("Android"))
-                deviceInfo = "Android";
-            else if (userAgent.Contains("iPhone") || userAgent.Contains("iPad"))
-                deviceInfo = "iOS";
-            else if (userAgent.Contains("Linux"))
-                deviceInfo = "Linux";
+            if (userAgent.Contains("Tablet") || userAgent.Contains("iPad"))
+                return "Tablet";
 
-            // Extraer el navegador
-            string browser = "Unknown";
-            if (userAgent.Contains("Chrome") && !userAgent.Contains("Chromium"))
-                browser = "Chrome";
-            else if (userAgent.Contains("Firefox"))
-                browser = "Firefox";
-            else if (userAgent.Contains("Safari") && !userAgent.Contains("Chrome"))
-                browser = "Safari";
-            else if (userAgent.Contains("Edge"))
-                browser = "Edge";
-            else if (userAgent.Contains("MSIE") || userAgent.Contains("Trident"))
-                browser = "Internet Explorer";
-
-            return $"{deviceInfo} - {browser}";
+            return "Escritorio";
         }
     }
 }

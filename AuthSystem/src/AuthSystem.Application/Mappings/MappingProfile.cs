@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using AuthSystem.Application.DTOs;
 using AuthSystem.Core.Entities;
 using System.Linq;
@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using AuthSystem.Application.Commands.Authentication;
 using AuthSystem.Application.Commands.User;
+using AuthSystem.Application.Commands.TwoFactor;
 
 namespace AuthSystem.Application.Mappings
 {

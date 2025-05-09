@@ -1,8 +1,8 @@
-﻿using AuthSystem.Application.Commands.Authentication;
+using AuthSystem.Application.Commands.TwoFactor;
 using FluentValidation;
 using System;
 
-namespace AuthSystem.Application.Validators.Authentication
+namespace AuthSystem.Application.Validators
 {
     public class TwoFactorLoginCommandValidator : AbstractValidator<TwoFactorLoginCommand>
     {
