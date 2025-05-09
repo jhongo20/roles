@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +37,18 @@ namespace AuthSystem.Infrastructure.Security
             var recaptchaResponse = JsonSerializer.Deserialize<RecaptchaResponse>(response);
 
             return recaptchaResponse?.Success == true && recaptchaResponse.Score >= _settings.MinimumScore;
+        }
+        
+        /// <summary>
+        /// Obtiene la configuración pública de reCAPTCHA (solo la clave del sitio)
+        /// </summary>
+        /// <returns>Configuración pública de reCAPTCHA</returns>
+        public RecaptchaPublicConfig GetPublicConfig()
+        {
+            return new RecaptchaPublicConfig
+            {
+                SiteKey = _settings.SiteKey
+            };
         }
 
         private class RecaptchaResponse

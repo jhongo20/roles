@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CQaZk3zHh3o=",
+  "dgSpecHash": "KUZVYqFJdjs=",
   "success": true,
-  "projectFilePath": "d:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\tests\\AuthSystem.UnitTests\\AuthSystem.UnitTests.csproj",
+  "projectFilePath": "D:\\Users\\Jhon\\Documentos\\Mintrabajo\\Modulo General usuarios\\roles y usuarios\\AuthSystem\\tests\\AuthSystem.UnitTests\\AuthSystem.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JHON\\.nuget\\packages\\autofixture\\4.18.1\\autofixture.4.18.1.nupkg.sha512",
     "C:\\Users\\JHON\\.nuget\\packages\\autofixture.automoq\\4.18.1\\autofixture.automoq.4.18.1.nupkg.sha512",

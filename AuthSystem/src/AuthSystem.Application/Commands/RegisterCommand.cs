@@ -11,15 +11,15 @@ namespace AuthSystem.Application.Commands.Authentication
 {
     public class RegisterCommand : IRequest<AuthResponseDto>
     {
-
-        public string Username { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string IpAddress { get; set; }
-        public string UserAgent { get; set; }
-        public string RecaptchaToken { get; set; }
+        public string Username { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+        public string ConfirmPassword { get; set; } = string.Empty; // Propiedad agregada
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string IpAddress { get; set; } = string.Empty;
+        public string UserAgent { get; set; } = string.Empty;
+        public string RecaptchaToken { get; set; } = string.Empty;
     }
 
     public class RegisterCommandHandler : IRequestHandler<RegisterCommand, AuthResponseDto>
