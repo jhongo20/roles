@@ -15,12 +15,14 @@ using AuthSystem.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Hosting;
 
 namespace AuthSystem.Infrastructure
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration, IHostEnvironment environment = null)
         {
             // Configurar DbContext
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -42,24 +44,27 @@ namespace AuthSystem.Infrastructure
             services.AddScoped<IPasswordHasher, PasswordHasher>();
             services.AddScoped<ITotpService, TotpService>();
             services.AddScoped<IAuditService, AuditService>();
-            services.AddScoped<IEmailTemplateService, EmailTemplateService>();
+            services.AddSingleton<IEmailTemplateService, EmailTemplateService>();
             services.AddScoped<IUserPermissionService, UserPermissionService>();
             
             // Configurar servicio de email (real o mock según configuración)
             var useMockEmailService = configuration.GetValue<bool>("UseMockEmailService");
-            if (useMockEmailService)
+            
+            // Registrar servicios de email como singleton para evitar problemas de inyección de dependencias
+            if (useMockEmailService || (environment != null && environment.IsDevelopment()))
             {
-                services.AddScoped<IEmailService, MockEmailService>();
+                services.AddSingleton<IEmailService, MockEmailService>();
+                services.AddSingleton<IEmailQueueService, MockEmailQueueService>();
             }
             else
             {
-                services.AddScoped<IEmailService, EmailService>();
+                services.AddSingleton<IEmailService, EmailService>();
+                services.AddSingleton<IEmailQueueService, EmailQueueService>();
             }
             
-            // Registrar servicio de cola para envío de emails
-            services.AddHostedService<BackgroundEmailSender>();
-            services.AddSingleton<BackgroundEmailSender>();
-            services.AddScoped<IEmailQueueService, EmailQueueService>();
+            // Registrar el servicio de envío de emails en segundo plano
+            // Comentado temporalmente para resolver problemas de inyección de dependencias
+            // services.AddHostedService<BackgroundEmailSender>();
             
             // Registrar servicio de limitación de intentos
             services.AddSingleton<IRateLimitService, RateLimitService>();

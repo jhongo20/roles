@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +25,7 @@ namespace AuthSystem.Infrastructure.Data.Repositories
         }
 
         public async Task LogActionAsync(Guid? userId, string action, string entityName, string entityId,
-                                        string oldValues, string newValues, string ipAddress, string userAgent)
+                                        string oldValues, string newValues, string? ipAddress, string? userAgent)
         {
             var auditLog = new AuditLog
             {
@@ -45,8 +45,8 @@ namespace AuthSystem.Infrastructure.Data.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task LogLoginAttemptAsync(string username, string email, string ipAddress, string userAgent,
-                                              bool successful, string failureReason, Guid? userId)
+        public async Task LogLoginAttemptAsync(string username, string? email, string? ipAddress, string? userAgent,
+                                              bool successful, string? failureReason, Guid? userId)
         {
             var loginAttempt = new LoginAttempt
             {

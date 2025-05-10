@@ -7,103 +7,83 @@ namespace AuthSystem.Infrastructure.Email
 {
     public class EmailQueueService : IEmailQueueService
     {
-        private readonly BackgroundEmailSender _emailSender;
+        private readonly IEmailService _emailService;
         private readonly ILogger<EmailQueueService> _logger;
 
-        public EmailQueueService(BackgroundEmailSender emailSender, ILogger<EmailQueueService> logger)
+        public EmailQueueService(IEmailService emailService, ILogger<EmailQueueService> logger)
         {
-            _emailSender = emailSender;
+            _emailService = emailService;
             _logger = logger;
         }
 
-        public void QueueConfirmationEmail(string email, Guid userId, string token)
+        public async void QueueConfirmationEmail(string email, Guid userId, string token)
         {
             try
             {
-                _logger.LogInformation("Encolando email de confirmación para {Email}", email);
+                _logger.LogInformation("Enviando email de confirmación para {Email}", email);
                 
-                var emailItem = new EmailQueueItem
-                {
-                    To = email,
-                    UserId = userId,
-                    Token = token,
-                    EmailType = EmailType.Confirmation
-                };
+                // Enviar email directamente usando IEmailService
+                await _emailService.SendConfirmationEmailAsync(email, userId.ToString(), token);
                 
-                _emailSender.QueueEmail(emailItem);
+                _logger.LogInformation("Email de confirmación enviado a {Email}", email);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al encolar email de confirmación para {Email}", email);
+                _logger.LogError(ex, "Error al enviar email de confirmación para {Email}", email);
                 throw;
             }
         }
 
-        public void QueuePasswordResetEmail(string email, Guid userId, string token)
+        public async void QueuePasswordResetEmail(string email, Guid userId, string token)
         {
             try
             {
-                _logger.LogInformation("Encolando email de restablecimiento de contraseña para {Email}", email);
+                _logger.LogInformation("Enviando email de restablecimiento de contraseña para {Email}", email);
                 
-                var emailItem = new EmailQueueItem
-                {
-                    To = email,
-                    UserId = userId,
-                    Token = token,
-                    EmailType = EmailType.PasswordReset
-                };
+                // Enviar email directamente usando IEmailService
+                await _emailService.SendPasswordResetEmailAsync(email, userId.ToString(), token);
                 
-                _emailSender.QueueEmail(emailItem);
+                _logger.LogInformation("Email de restablecimiento de contraseña enviado a {Email}", email);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al encolar email de restablecimiento de contraseña para {Email}", email);
+                _logger.LogError(ex, "Error al enviar email de restablecimiento de contraseña para {Email}", email);
                 throw;
             }
         }
 
-        public void QueueTwoFactorCodeEmail(string email, string code)
+        public async void QueueTwoFactorCodeEmail(string email, string code)
         {
             try
             {
-                _logger.LogInformation("Encolando email con código de verificación para {Email}", email);
+                _logger.LogInformation("Enviando email con código de verificación para {Email}", email);
                 
-                var emailItem = new EmailQueueItem
-                {
-                    To = email,
-                    Token = code,
-                    EmailType = EmailType.TwoFactorCode
-                };
+                // Enviar email directamente usando IEmailService
+                await _emailService.SendTwoFactorCodeAsync(email, code);
                 
-                _emailSender.QueueEmail(emailItem);
+                _logger.LogInformation("Email con código de verificación enviado a {Email}", email);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al encolar email con código de verificación para {Email}", email);
+                _logger.LogError(ex, "Error al enviar email con código de verificación para {Email}", email);
                 throw;
             }
         }
 
-        public void QueueGenericEmail(string to, string subject, string body, bool isHtml = true)
+        public async void QueueGenericEmail(string to, string subject, string body, bool isHtml = true)
         {
             try
             {
-                _logger.LogInformation("Encolando email genérico para {To} con asunto '{Subject}'", to, subject);
+                _logger.LogInformation("Enviando email genérico para {To} con asunto '{Subject}'", to, subject);
                 
-                var emailItem = new EmailQueueItem
-                {
-                    To = to,
-                    Subject = subject,
-                    Body = body,
-                    IsHtml = isHtml,
-                    EmailType = EmailType.Generic
-                };
+                // Enviar email directamente usando IEmailService
+                await _emailService.SendAsync(to, subject, body, isHtml);
                 
-                _emailSender.QueueEmail(emailItem);
+                _logger.LogInformation("Email genérico enviado a {To}", to);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al encolar email genérico para {To}", to);
+                _logger.LogError(ex, "Error al enviar email genérico para {To}", to);
                 throw;
             }
         }

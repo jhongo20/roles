@@ -22,7 +22,7 @@ namespace AuthSystem.Infrastructure.Services
         }
 
         public async Task LogActionAsync(Guid? userId, string action, string entityName, string entityId,
-                                        object oldValues, object newValues, string ipAddress = null, string userAgent = null)
+                                        object? oldValues, object? newValues, string? ipAddress = null, string? userAgent = null)
         {
             string oldValuesJson = oldValues != null ? JsonSerializer.Serialize(oldValues) : string.Empty;
             string newValuesJson = newValues != null ? JsonSerializer.Serialize(newValues) : string.Empty;
@@ -31,10 +31,10 @@ namespace AuthSystem.Infrastructure.Services
                                                 oldValuesJson, newValuesJson, ipAddress, userAgent);
         }
 
-        public async Task LogLoginAttemptAsync(string username, string ipAddress, string userAgent,
-                                              bool successful, string failureReason = null, Guid? userId = null)
+        public async Task LogLoginAttemptAsync(string username, string? ipAddress, string? userAgent,
+                                              bool successful, string? failureReason = null, Guid? userId = null)
         {
-            string email = null;
+            string? email = null;
 
             // Verificar si username es un email
             if (username != null && username.Contains("@"))

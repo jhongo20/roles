@@ -1,0 +1,27 @@
+2025-05-10 16:48:12.810 -05:00 [INF] User profile is available. Using 'C:\Users\JHON\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-10 16:48:12.960 -05:00 [WRN] The WebRootPath was not found: D:\Users\Jhon\Documentos\Mintrabajo\Modulo General usuarios\roles y usuarios\AuthSystem\src\AuthSystem.API\wwwroot. Static files may be unavailable.
+2025-05-10 16:48:13.019 -05:00 [INF] Now listening on: http://localhost:5000
+2025-05-10 16:48:13.021 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-10 16:48:13.022 -05:00 [INF] Hosting environment: Development
+2025-05-10 16:48:13.023 -05:00 [INF] Content root path: D:\Users\Jhon\Documentos\Mintrabajo\Modulo General usuarios\roles y usuarios\AuthSystem\src\AuthSystem.API
+2025-05-10 16:48:46.081 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-05-10 16:48:46.120 -05:00 [INF] Request c29d084b-df86-479c-890a-c6f5ae6a523d started: GET / - IP: ::1, UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
+2025-05-10 16:48:46.126 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-10 16:48:46.163 -05:00 [INF] Request c29d084b-df86-479c-890a-c6f5ae6a523d completed: GET / - Status: 404 in 47ms
+2025-05-10 16:48:46.175 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 96.2489ms
+2025-05-10 16:48:46.180 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2025-05-10 16:48:49.207 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-05-10 16:48:49.210 -05:00 [INF] Request 112b2408-1a20-460f-b1c7-e6167fa3b309 started: GET / - IP: ::1, UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
+2025-05-10 16:48:49.213 -05:00 [INF] Request 112b2408-1a20-460f-b1c7-e6167fa3b309 completed: GET / - Status: 404 in 2ms
+2025-05-10 16:48:49.215 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 7.9534ms
+2025-05-10 16:48:49.218 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2025-05-10 16:48:57.159 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger - null null
+2025-05-10 16:48:57.162 -05:00 [INF] Request 9609c96d-9d26-468c-acf3-a666ce77f5ef started: GET /swagger - IP: ::1, UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
+2025-05-10 16:48:57.165 -05:00 [INF] Request 9609c96d-9d26-468c-acf3-a666ce77f5ef completed: GET /swagger - Status: 404 in 3ms
+2025-05-10 16:48:57.167 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger - 404 0 null 8.0652ms
+2025-05-10 16:48:57.169 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/swagger, Response status code: 404
+2025-05-10 16:49:05.421 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2025-05-10 16:49:05.423 -05:00 [INF] Request f515808c-f1b2-4329-8789-7ba1ca2fe2a9 started: GET /swagger/index.html - IP: ::1, UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
+2025-05-10 16:49:05.426 -05:00 [INF] Request f515808c-f1b2-4329-8789-7ba1ca2fe2a9 completed: GET /swagger/index.html - Status: 404 in 2ms
+2025-05-10 16:49:05.428 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 404 0 null 6.9578ms
+2025-05-10 16:49:05.431 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/swagger/index.html, Response status code: 404

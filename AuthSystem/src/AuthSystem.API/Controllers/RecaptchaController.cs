@@ -172,18 +172,18 @@ namespace AuthSystem.API.Controllers
 
     public class RecaptchaVerificationRequest
     {
-        public string Token { get; set; }
+        public string Token { get; set; } = string.Empty;
     }
 
     public class RecaptchaVerificationResponse
     {
         public bool Success { get; set; }
-        public string Message { get; set; }
+        public string Message { get; set; } = string.Empty;
     }
 
     public class RecaptchaConfigResponse
     {
-        public string SiteKey { get; set; }
-        public string Error { get; set; }
+        public string SiteKey { get; set; } = string.Empty;
+        public string Error { get; set; } = string.Empty;
     }
 }

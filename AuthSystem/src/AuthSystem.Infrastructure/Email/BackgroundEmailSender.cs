@@ -15,6 +15,7 @@ namespace AuthSystem.Infrastructure.Email
         private readonly SemaphoreSlim _signal = new SemaphoreSlim(0);
         private readonly IEmailService _emailService;
 
+        // Inyectar IEmailService como singleton para evitar problemas de inyección de dependencias
         public BackgroundEmailSender(ILogger<BackgroundEmailSender> logger, IEmailService emailService)
         {
             _logger = logger;
@@ -104,12 +105,12 @@ namespace AuthSystem.Infrastructure.Email
 
     public class EmailQueueItem
     {
-        public string To { get; set; }
-        public string Subject { get; set; }
-        public string Body { get; set; }
+        public string To { get; set; } = string.Empty;
+        public string Subject { get; set; } = string.Empty;
+        public string Body { get; set; } = string.Empty;
         public bool IsHtml { get; set; } = true;
         public Guid? UserId { get; set; }
-        public string Token { get; set; }
+        public string Token { get; set; } = string.Empty;
         public EmailType EmailType { get; set; }
         public int RetryCount { get; set; } = 0;
         public int MaxRetries { get; set; } = 3;

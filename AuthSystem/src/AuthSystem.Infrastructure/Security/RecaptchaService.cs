@@ -55,15 +55,15 @@ namespace AuthSystem.Infrastructure.Security
         {
             public bool Success { get; set; }
             public float Score { get; set; }
-            public string Action { get; set; }
-            public string Hostname { get; set; }
+            public string Action { get; set; } = string.Empty;
+            public string Hostname { get; set; } = string.Empty;
         }
     }
 
     public class RecaptchaSettings
     {
-        public string SiteKey { get; set; }
-        public string SecretKey { get; set; }
+        public string SiteKey { get; set; } = string.Empty;
+        public string SecretKey { get; set; } = string.Empty;
         public float MinimumScore { get; set; } = 0.5f;
     }
 }

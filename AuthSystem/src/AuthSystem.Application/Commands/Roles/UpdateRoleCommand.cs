@@ -11,10 +11,16 @@ namespace AuthSystem.Application.Commands.Roles
     public class UpdateRoleCommand : IRequest<RoleResponseDto>
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        
+        [System.ComponentModel.DataAnnotations.Required]
+        public string Name { get; set; } = string.Empty;
+        
+        public string? Description { get; set; } = string.Empty;
+        
         public bool IsActive { get; set; }
+        
         public bool IsDefault { get; set; }
+        
         public int Priority { get; set; }
     }
 

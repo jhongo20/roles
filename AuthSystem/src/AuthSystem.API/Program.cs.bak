@@ -54,9 +54,9 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Registrar servicios de la aplicación e infraestructura
+// Agregar servicios de la aplicaci�n
 builder.Services.AddApplication();
-builder.Services.AddInfrastructure(builder.Configuration, builder.Environment);
+builder.Services.AddInfrastructure(builder.Configuration);
 
 // Configurar JSON serialization
 builder.Services.AddControllers()
