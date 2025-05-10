@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AuthSystem.API</name>
+    </assembly>
+    <members>
+        <member name="M:AuthSystem.API.Controllers.ModulesController.GetAllModules(System.Boolean,System.Boolean)">
+            <summary>
+            Obtiene todos los módulos
+            </summary>
+            <param name="includeInactive">Indica si se deben incluir módulos inactivos</param>
+            <param name="includePermissions">Indica si se deben incluir los permisos de cada módulo</param>
+            <returns>Lista de módulos</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.ModulesController.GetModuleById(System.Guid,System.Boolean)">
+            <summary>
+            Obtiene un módulo por su ID
+            </summary>
+            <param name="id">ID del módulo</param>
+            <param name="includePermissions">Indica si se deben incluir los permisos del módulo</param>
+            <returns>Detalles del módulo</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.ModulesController.GetModulePermissions(System.Guid)">
+            <summary>
+            Obtiene los permisos de un módulo
+            </summary>
+            <param name="id">ID del módulo</param>
+            <returns>Lista de permisos del módulo</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.ModulesController.CreateModule(AuthSystem.Application.Commands.Modules.CreateModuleCommand)">
+            <summary>
+            Crea un nuevo módulo
+            </summary>
+            <param name="command">Datos del módulo a crear</param>
+            <returns>Módulo creado</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.ModulesController.UpdateModule(System.Guid,AuthSystem.Application.Commands.Modules.UpdateModuleCommand)">
+            <summary>
+            Actualiza un módulo existente
+            </summary>
+            <param name="id">ID del módulo</param>
+            <param name="command">Datos actualizados del módulo</param>
+            <returns>Módulo actualizado</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.ModulesController.DeleteModule(System.Guid)">
+            <summary>
+            Elimina un módulo
+            </summary>
+            <param name="id">ID del módulo a eliminar</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.ModulesController.AddPermissionToModule(System.Guid,System.Guid)">
+            <summary>
+            Asocia un permiso a un módulo
+            </summary>
+            <param name="moduleId">ID del módulo</param>
+            <param name="permissionId">ID del permiso</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.ModulesController.RemovePermissionFromModule(System.Guid,System.Guid)">
+            <summary>
+            Quita un permiso de un módulo
+            </summary>
+            <param name="moduleId">ID del módulo</param>
+            <param name="permissionId">ID del permiso</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.PermissionsController.GetAllPermissions(System.Boolean,System.String)">
+            <summary>
+            Obtiene todos los permisos
+            </summary>
+            <param name="includeInactive">Indica si se deben incluir permisos inactivos</param>
+            <param name="category">Categoría para filtrar (opcional)</param>
+            <returns>Lista de permisos</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.PermissionsController.GetPermissionById(System.Guid)">
+            <summary>
+            Obtiene un permiso por su ID
+            </summary>
+            <param name="id">ID del permiso</param>
+            <returns>Detalles del permiso</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.PermissionsController.GetPermissionCategories">
+            <summary>
+            Obtiene todas las categorías de permisos
+            </summary>
+            <returns>Lista de categorías</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.PermissionsController.CreatePermission(AuthSystem.Application.Commands.Permissions.CreatePermissionCommand)">
+            <summary>
+            Crea un nuevo permiso
+            </summary>
+            <param name="command">Datos del permiso a crear</param>
+            <returns>Permiso creado</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.PermissionsController.UpdatePermission(System.Guid,AuthSystem.Application.Commands.Permissions.UpdatePermissionCommand)">
+            <summary>
+            Actualiza un permiso existente
+            </summary>
+            <param name="id">ID del permiso</param>
+            <param name="command">Datos actualizados del permiso</param>
+            <returns>Permiso actualizado</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.PermissionsController.DeletePermission(System.Guid)">
+            <summary>
+            Elimina un permiso
+            </summary>
+            <param name="id">ID del permiso a eliminar</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.RecaptchaController.VerifyToken(AuthSystem.API.Controllers.RecaptchaVerificationRequest)">
+            <summary>
+            Verifica un token de reCAPTCHA
+            </summary>
+            <param name="request">Solicitud con el token de reCAPTCHA</param>
+            <returns>Resultado de la verificación</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.RecaptchaController.Register(AuthSystem.Application.DTOs.RegisterRequestDto)">
+            <summary>
+            Registra un nuevo usuario con validación de reCAPTCHA
+            </summary>
+            <param name="request">Datos de registro del usuario</param>
+            <returns>Resultado del registro</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.RecaptchaController.GetConfig">
+            <summary>
+            Obtiene la configuración pública de reCAPTCHA (solo la clave del sitio)
+            </summary>
+            <returns>Configuración pública de reCAPTCHA</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.RolesController.GetAllRoles(System.Boolean)">
+            <summary>
+            Obtiene todos los roles
+            </summary>
+            <param name="includeInactive">Indica si se deben incluir roles inactivos</param>
+            <returns>Lista de roles</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.RolesController.GetRoleById(System.Guid)">
+            <summary>
+            Obtiene un rol por su ID
+            </summary>
+            <param name="id">ID del rol</param>
+            <returns>Detalles del rol</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.RolesController.CreateRole(AuthSystem.Application.Commands.Roles.CreateRoleCommand)">
+            <summary>
+            Crea un nuevo rol
+            </summary>
+            <param name="command">Datos del rol a crear</param>
+            <returns>Rol creado</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.RolesController.UpdateRole(System.Guid,AuthSystem.Application.Commands.Roles.UpdateRoleCommand)">
+            <summary>
+            Actualiza un rol existente
+            </summary>
+            <param name="id">ID del rol</param>
+            <param name="command">Datos actualizados del rol</param>
+            <returns>Rol actualizado</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.RolesController.DeleteRole(System.Guid)">
+            <summary>
+            Elimina un rol
+            </summary>
+            <param name="id">ID del rol a eliminar</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.RolesController.AddPermissionToRole(System.Guid,System.Guid)">
+            <summary>
+            Agrega un permiso a un rol
+            </summary>
+            <param name="roleId">ID del rol</param>
+            <param name="permissionId">ID del permiso</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.RolesController.RemovePermissionFromRole(System.Guid,System.Guid)">
+            <summary>
+            Elimina un permiso de un rol
+            </summary>
+            <param name="roleId">ID del rol</param>
+            <param name="permissionId">ID del permiso</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.UserManagementController.GetAllUsers(System.Boolean,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Obtiene todos los usuarios
+            </summary>
+            <param name="includeInactive">Indica si se deben incluir usuarios inactivos</param>
+            <param name="searchTerm">Término de búsqueda (nombre, email, etc.)</param>
+            <param name="pageNumber">Número de página para paginación</param>
+            <param name="pageSize">Tamaño de página para paginación</param>
+            <returns>Lista de usuarios</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.UserManagementController.GetUserById(System.Guid)">
+            <summary>
+            Obtiene un usuario por su ID
+            </summary>
+            <param name="id">ID del usuario</param>
+            <returns>Detalles del usuario</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.UserManagementController.CreateUser(AuthSystem.Application.Commands.UserManagement.CreateUserCommand)">
+            <summary>
+            Crea un nuevo usuario
+            </summary>
+            <param name="command">Datos del usuario a crear</param>
+            <returns>Usuario creado</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.UserManagementController.UpdateUser(System.Guid,AuthSystem.Application.Commands.UserManagement.UpdateUserCommand)">
+            <summary>
+            Actualiza un usuario existente
+            </summary>
+            <param name="id">ID del usuario</param>
+            <param name="command">Datos actualizados del usuario</param>
+            <returns>Usuario actualizado</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.UserManagementController.ChangeUserStatus(System.Guid,AuthSystem.Application.Commands.UserManagement.ChangeUserStatusCommand)">
+            <summary>
+            Cambia el estado de un usuario (activar, desactivar, suspender, bloquear)
+            </summary>
+            <param name="id">ID del usuario</param>
+            <param name="command">Datos del cambio de estado</param>
+            <returns>Usuario actualizado</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.UserManagementController.ResetUserPassword(System.Guid,AuthSystem.Application.Commands.UserManagement.ResetUserPasswordCommand)">
+            <summary>
+            Restablece la contraseña de un usuario
+            </summary>
+            <param name="id">ID del usuario</param>
+            <param name="command">Datos para el restablecimiento de contraseña</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.UserManagementController.ResendActivationEmail(System.Guid)">
+            <summary>
+            Reenvía el correo de activación a un usuario
+            </summary>
+            <param name="id">ID del usuario</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.UserManagementController.DeleteUser(System.Guid)">
+            <summary>
+            Elimina un usuario (marcándolo como inactivo)
+            </summary>
+            <param name="id">ID del usuario a eliminar</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.UserRolesController.GetUserRoles(System.Guid)">
+            <summary>
+            Obtiene todos los roles asignados a un usuario
+            </summary>
+            <param name="userId">ID del usuario</param>
+            <returns>Lista de roles del usuario</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.UserRolesController.AssignRoleToUser(System.Guid,System.Guid)">
+            <summary>
+            Asigna un rol a un usuario
+            </summary>
+            <param name="userId">ID del usuario</param>
+            <param name="roleId">ID del rol a asignar</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="M:AuthSystem.API.Controllers.UserRolesController.RemoveRoleFromUser(System.Guid,System.Guid)">
+            <summary>
+            Quita un rol de un usuario
+            </summary>
+            <param name="userId">ID del usuario</param>
+            <param name="roleId">ID del rol a quitar</param>
+            <returns>Resultado de la operación</returns>
+        </member>
+        <member name="T:AuthSystem.API.Swagger.SwaggerConfiguration">
+            <summary>
+            Configuración mejorada de Swagger para la API de AuthSystem
+            </summary>
+        </member>
+        <member name="M:AuthSystem.API.Swagger.SwaggerConfiguration.ConfigureSwaggerServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configura los servicios de Swagger con documentación mejorada
+            </summary>
+        </member>
+        <member name="M:AuthSystem.API.Swagger.SwaggerConfiguration.ConfigureSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configura la aplicación para usar Swagger con UI mejorada
+            </summary>
+        </member>
+        <member name="T:AuthSystem.API.Swagger.SwaggerExamplesSchemaFilter">
+            <summary>
+            Filtro para añadir ejemplos a los esquemas de Swagger
+            </summary>
+        </member>
+        <member name="T:AuthSystem.API.Swagger.SwaggerExamplesOperationFilter">
+            <summary>
+            Filtro para añadir ejemplos a las operaciones de Swagger
+            </summary>
+        </member>
+    </members>
+</doc>

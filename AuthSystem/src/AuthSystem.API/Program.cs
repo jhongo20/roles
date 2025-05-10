@@ -11,6 +11,7 @@ using AuthSystem.API.Middleware;
 using AuthSystem.Infrastructure;
 using AuthSystem.Infrastructure.Security;
 using AuthSystem.Application;
+using AuthSystem.API.Swagger;
 
 // Paquetes de Microsoft 
 using Microsoft.AspNetCore.Builder;
@@ -53,7 +54,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Agregar servicios de la aplicaciÛn
+// Agregar servicios de la aplicaciÔøΩn
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
@@ -118,14 +119,14 @@ builder.Services.AddHealthChecks()
     .AddSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 // Agregar Swagger
-builder.Services.AddEndpointsApiExplorer();
+/*builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "Sistema de AutenticaciÛn y AutorizaciÛn",
+        Title = "Sistema de AutenticaciÔøΩn y AutorizaciÔøΩn",
         Version = "v1",
-        Description = "API para autenticaciÛn, roles y permisos con .NET 8",
+        Description = "API para autenticaciÔøΩn, roles y permisos con .NET 8",
         Contact = new OpenApiContact
         {
             Name = "Administrador",
@@ -164,15 +165,19 @@ builder.Services.AddSwaggerGen(c =>
     {
         c.IncludeXmlComments(xmlPath);
     }
-});
+});*/
+// Agregar Swagger con configuraci√≥n mejorada
+builder.Services.ConfigureSwaggerServices();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    /*app.UseSwagger();
+    app.UseSwaggerUI();*/
+    // Configurar Swagger UI mejorada
+app.ConfigureSwagger();
     app.UseDeveloperExceptionPage();
 }
 else

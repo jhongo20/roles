@@ -524,3 +524,4 @@ D:\Users\Jhon\Documentos\Mintrabajo\Modulo General usuarios\roles y usuarios\Aut
 D:\Users\Jhon\Documentos\Mintrabajo\Modulo General usuarios\roles y usuarios\AuthSystem\tests\AuthSystem.IntegrationTests\bin\Debug\net8.0\Castle.Core.dll
 D:\Users\Jhon\Documentos\Mintrabajo\Modulo General usuarios\roles y usuarios\AuthSystem\tests\AuthSystem.IntegrationTests\bin\Debug\net8.0\Moq.dll
 d:\Users\Jhon\Documentos\Mintrabajo\Modulo General usuarios\roles y usuarios\AuthSystem\tests\AuthSystem.IntegrationTests\bin\Debug\net8.0\Azure.Communication.Sms.dll
+D:\Users\Jhon\Documentos\Mintrabajo\Modulo General usuarios\roles y usuarios\AuthSystem\tests\AuthSystem.IntegrationTests\bin\Debug\net8.0\AuthSystem.API.xml
