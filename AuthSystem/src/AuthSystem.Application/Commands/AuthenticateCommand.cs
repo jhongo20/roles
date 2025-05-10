@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using AuthSystem.Application.DTOs;
@@ -241,6 +241,9 @@ namespace AuthSystem.Application.Commands.Authentication
         {
             if (_auditService != null)
             {
+                // La interfaz IAuditService.LogLoginAttemptAsync espera estos parámetros:
+                // (string username, string ipAddress, string userAgent, bool successful, string failureReason = null, Guid? userId = null)
+                // El servicio se encargará de determinar si el username es un email
                 await _auditService.LogLoginAttemptAsync(
                     request.Username,
                     request.IpAddress,
@@ -255,6 +258,9 @@ namespace AuthSystem.Application.Commands.Authentication
         {
             if (_auditService != null)
             {
+                // La interfaz IAuditService.LogLoginAttemptAsync espera estos parámetros:
+                // (string username, string ipAddress, string userAgent, bool successful, string failureReason = null, Guid? userId = null)
+                // El servicio se encargará de determinar si el username es un email
                 await _auditService.LogLoginAttemptAsync(
                     request.Username,
                     request.IpAddress,

@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace AuthSystem.Application.DTOs
 {
     public class ApiResponseDto<T>
     {
         public bool Succeeded { get; set; }
-        public string Message { get; set; }
-        public string ErrorCode { get; set; }
+        public string Message { get; set; } = string.Empty;
+        public string ErrorCode { get; set; } = string.Empty;
         public T Data { get; set; }
         public List<string> Errors { get; set; } = new List<string>();
 

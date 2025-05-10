@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +28,12 @@ namespace AuthSystem.Infrastructure.Data.Repositories
 
         public virtual async Task<T> GetByIdAsync(Guid id)
         {
-            return await _dbSet.FindAsync(id);
+            var entity = await _dbSet.FindAsync(id);
+            if (entity == null)
+            {
+                throw new InvalidOperationException($"Entidad con ID {id} no encontrada");
+            }
+            return entity;
         }
 
         public virtual async Task<IReadOnlyList<T>> GetAllAsync()

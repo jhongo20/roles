@@ -1,10 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// Data/Repositories/RoleRepository.cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +5,19 @@ using System.Threading.Tasks;
 using AuthSystem.Core.Entities;
 using AuthSystem.Core.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace AuthSystem.Infrastructure.Data.Repositories
 {
     public class RoleRepository : Repository<Role>, IRoleRepository
     {
-        public RoleRepository(ApplicationDbContext context) : base(context)
+        private readonly ILogger<RoleRepository> _logger;
+
+        public RoleRepository(
+            ApplicationDbContext context,
+            ILogger<RoleRepository> logger) : base(context)
         {
+            _logger = logger;
         }
 
         public async Task<Role> FindByNameAsync(string name)
@@ -72,6 +71,20 @@ namespace AuthSystem.Infrastructure.Data.Repositories
 
             _context.RolePermissions.Remove(rolePermission);
             return await _context.SaveChangesAsync() > 0;
+        }
+
+        public async Task<bool> IsPermissionAssignedToAnyRoleAsync(Guid permissionId)
+        {
+            try
+            {
+                return await _context.RolePermissions
+                    .AnyAsync(rp => rp.PermissionId == permissionId);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al verificar si el permiso {PermissionId} está asignado a algún rol", permissionId);
+                return false;
+            }
         }
     }
 }

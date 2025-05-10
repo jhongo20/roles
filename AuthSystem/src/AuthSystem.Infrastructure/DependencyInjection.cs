@@ -35,6 +35,7 @@ namespace AuthSystem.Infrastructure
             services.AddScoped<IPermissionRepository, PermissionRepository>();
             services.AddScoped<IModuleRepository, ModuleRepository>();
             services.AddScoped<IAuditRepository, AuditRepository>();
+            services.AddScoped<IUserRoleRepository, UserRoleRepository>();
 
             // Registrar servicios
             services.AddScoped<IJwtService, JwtService>();
@@ -42,6 +43,7 @@ namespace AuthSystem.Infrastructure
             services.AddScoped<ITotpService, TotpService>();
             services.AddScoped<IAuditService, AuditService>();
             services.AddScoped<IEmailTemplateService, EmailTemplateService>();
+            services.AddScoped<IUserPermissionService, UserPermissionService>();
             
             // Configurar servicio de email (real o mock según configuración)
             var useMockEmailService = configuration.GetValue<bool>("UseMockEmailService");

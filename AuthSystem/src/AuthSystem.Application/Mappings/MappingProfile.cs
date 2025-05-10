@@ -30,8 +30,8 @@ namespace AuthSystem.Application.Mappings
 
             // Module mappings
             CreateMap<Module, ModuleDto>()
-                .ForMember(dest => dest.ParentName, opt => opt.MapFrom(src => src.Parent != null ? src.Parent.Name : null))
-                .ForMember(dest => dest.Children, opt => opt.Ignore())
+                .ForMember(dest => dest.ParentModuleName, opt => opt.MapFrom(src => src.Parent != null ? src.Parent.Name : null))
+                .ForMember(dest => dest.ChildModules, opt => opt.Ignore())
                 .ForMember(dest => dest.Permissions, opt => opt.Ignore());
 
             // UserSession mappings
@@ -90,15 +90,15 @@ namespace AuthSystem.Application.Mappings
         private object DeserializeJsonOrDefault(string json)
         {
             if (string.IsNullOrEmpty(json))
-                return null;
+                return new object(); // Devolver un objeto vacío en lugar de null
 
             try
             {
-                return JsonSerializer.Deserialize<object>(json);
+                return JsonSerializer.Deserialize<object>(json) ?? new object();
             }
             catch
             {
-                return null;
+                return new object(); // Devolver un objeto vacío en caso de error
             }
         }
     }

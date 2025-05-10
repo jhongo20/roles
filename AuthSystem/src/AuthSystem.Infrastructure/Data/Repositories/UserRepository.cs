@@ -332,15 +332,14 @@ namespace AuthSystem.Infrastructure.Data.Repositories
 
             if (tokenEntity == null)
             {
-                // No podemos crear una instancia de User sin argumentos, así que devolvemos null
-                // El método que llama a esta función debe manejar el caso de User nulo
-                return (false, null);
+                // Token no válido o expirado
+                throw new InvalidOperationException("El token de confirmación de email no es válido o ha expirado.");
             }
 
             var user = await _dbSet.FindAsync(userId);
             if (user == null)
             {
-                return (false, null);
+                throw new InvalidOperationException("No se encontró el usuario asociado al token.");
             }
 
             return (true, user);
@@ -482,7 +481,7 @@ namespace AuthSystem.Infrastructure.Data.Repositories
             var user = await FindByEmailAsync(email);
             if (user == null)
             {
-                return (false, null);
+                throw new InvalidOperationException($"No se encontró ningún usuario con el email '{email}'.");
             }
 
             // Verificar la contraseña usando BCrypt
@@ -495,7 +494,7 @@ namespace AuthSystem.Infrastructure.Data.Repositories
             var user = await FindByUsernameAsync(username);
             if (user == null)
             {
-                return (false, null);
+                throw new InvalidOperationException($"No se encontró ningún usuario con el nombre de usuario '{username}'.");
             }
 
             // Verificar la contraseña usando BCrypt

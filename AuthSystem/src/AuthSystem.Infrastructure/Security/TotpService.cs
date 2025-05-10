@@ -1,15 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-// Security/TotpService.cs
-using AuthSystem.Core.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.Security.Cryptography;
-using System.Text;
+using AuthSystem.Core.Interfaces;
 
 namespace AuthSystem.Infrastructure.Security
 {

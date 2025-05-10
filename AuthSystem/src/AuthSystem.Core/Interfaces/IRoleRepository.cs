@@ -11,5 +11,6 @@ namespace AuthSystem.Core.Interfaces
         Task<IReadOnlyList<Permission>> GetRolePermissionsAsync(Guid roleId);
         Task<bool> AddPermissionAsync(Guid roleId, Guid permissionId, Guid? assignedBy = null);
         Task<bool> RemovePermissionAsync(Guid roleId, Guid permissionId);
+        Task<bool> IsPermissionAssignedToAnyRoleAsync(Guid permissionId);
     }
 }

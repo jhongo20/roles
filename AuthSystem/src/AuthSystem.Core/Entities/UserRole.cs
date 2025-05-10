@@ -15,6 +15,10 @@ namespace AuthSystem.Core.Entities
         public DateTime AssignedAt { get; set; }
         public DateTime? ExpirationDate { get; set; }
         public bool IsActive { get; set; }
+
+         // Propiedades de navegación para EF Core
+    public User User { get; set; }
+    public Role Role { get; set; }
     }
 
     public class RolePermission

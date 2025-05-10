@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,8 +24,8 @@ namespace AuthSystem.Infrastructure.Services
         public async Task LogActionAsync(Guid? userId, string action, string entityName, string entityId,
                                         object oldValues, object newValues, string ipAddress = null, string userAgent = null)
         {
-            string oldValuesJson = oldValues != null ? JsonSerializer.Serialize(oldValues) : null;
-            string newValuesJson = newValues != null ? JsonSerializer.Serialize(newValues) : null;
+            string oldValuesJson = oldValues != null ? JsonSerializer.Serialize(oldValues) : string.Empty;
+            string newValuesJson = newValues != null ? JsonSerializer.Serialize(newValues) : string.Empty;
 
             await _auditRepository.LogActionAsync(userId, action, entityName, entityId,
                                                 oldValuesJson, newValuesJson, ipAddress, userAgent);

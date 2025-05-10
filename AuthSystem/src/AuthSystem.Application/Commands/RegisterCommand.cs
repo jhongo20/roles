@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using AuthSystem.Application.DTOs;
@@ -157,14 +157,14 @@ namespace AuthSystem.Application.Commands.Authentication
                 if (_auditService != null)
                 {
                     await _auditService.LogActionAsync(
-                        user.Id,
-                        "Register",
-                        "User",
-                        user.Id.ToString(),
-                        null,
-                        new { Id = user.Id, Username = user.Username, Email = user.Email },
-                        request.IpAddress,
-                        request.UserAgent);
+                        userId: user.Id,
+                        action: "Register",
+                        entityName: "User",
+                        entityId: user.Id.ToString(),
+                        oldValues: null,
+                        newValues: new { Id = user.Id, Username = user.Username, Email = user.Email },
+                        ipAddress: request.IpAddress,
+                        userAgent: request.UserAgent);
                 }
 
                 // 12. Devolver respuesta exitosa

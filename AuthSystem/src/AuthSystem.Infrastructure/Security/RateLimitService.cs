@@ -44,7 +44,11 @@ namespace AuthSystem.Infrastructure.Security
                 }
                 else
                 {
-                    rateLimitInfo = JsonConvert.DeserializeObject<RateLimitInfo>(cacheData);
+                    rateLimitInfo = JsonConvert.DeserializeObject<RateLimitInfo>(cacheData) ?? new RateLimitInfo
+                    {
+                        Count = 1,
+                        FirstAttemptTime = DateTime.UtcNow
+                    };
                     
                     // Si ha pasado el tiempo de ventana, reiniciar el contador
                     if (DateTime.UtcNow - rateLimitInfo.FirstAttemptTime > timeWindow)
