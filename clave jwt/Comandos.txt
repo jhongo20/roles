@@ -1,0 +1,9 @@
+# Genera un secret de 32 caracteres (alta seguridad)
+$secretBytes = New-Object byte[] 32
+$rng = [Security.Cryptography.RandomNumberGenerator]::Create()
+$rng.GetBytes($secretBytes)
+$secret = [Convert]::ToBase64String($secretBytes)
+$secret
+
+ejemplo clave generada:
+pIB4aCibDV7WMHDyjzC4/K8D5jHyqhlkJs+Dd5BH/jE=
